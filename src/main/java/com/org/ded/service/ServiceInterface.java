@@ -13,5 +13,6 @@ public interface ServiceInterface {
     public String deleteByAddress(String address);
 
     public Integer deleteById(Integer id);
+    public Integer getById(Integer id);
 
 }

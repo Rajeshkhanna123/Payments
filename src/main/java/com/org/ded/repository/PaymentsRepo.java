@@ -13,6 +13,9 @@ public interface PaymentsRepo extends JpaRepository<Payments,Integer> {
     String deleteByAddress(String address);
     @Transactional
     void deleteById(Integer id);
+
+    @Transactional
+    Payments getById(Integer id);
 }
     /*public String deleteByAddress(@PathVariable String address){
         String ss=ServiceInterface.deleteByAddress(address);

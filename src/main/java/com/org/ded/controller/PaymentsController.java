@@ -34,6 +34,12 @@ public class PaymentsController {
         Integer ii=ServiceInterface.deleteById(id);
         return ii;
     }
+    @GetMapping("/getById/{id}")
+    public Integer getById(@PathVariable Integer id){
+        Integer ss=ServiceInterface.getById(id);
+        return ss;
+    }
+
 }
 /*@DeleteMapping("/deleteById/{id}")
     public String delateById(@PathVariable Integer id){
