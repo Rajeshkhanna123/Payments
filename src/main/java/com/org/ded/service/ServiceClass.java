@@ -4,8 +4,6 @@ import com.org.ded.model.Payments;
 import com.org.ded.repository.PaymentsRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @Service
 public class ServiceClass implements ServiceInterface {
@@ -23,11 +21,28 @@ public class ServiceClass implements ServiceInterface {
     }
 
     @Override
-    public String deletePayment(Integer Payments) {
-        PaymentsRepo.deletePayment(Payments);
-            return "gg";
-        }
+    public String deleteByAddress(String address) {
+        String s = PaymentsRepo.deleteByAddress(address);
+        return s;
     }
+
+   @Override
+    public Integer deleteById(Integer id) {
+        PaymentsRepo.deleteById(id);
+        return null;
+    }
+
+    /*@Override
+    public Integer deleteById(Integer id){
+        Integer i = PaymentsRepo.deleteById(id);
+        return i;
+    }*/
+
+    }
+
+
+
+
 
 /*@Override
     public String delateById(Integer id) {

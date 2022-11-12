@@ -23,10 +23,16 @@ public class PaymentsController {
         ServiceInterface.updatepayment(Payments);
 
     }
-    @DeleteMapping("/delete/{Id}")
-    public String deletePayment(@PathVariable Integer Payments){
-       String s= ServiceInterface.deletePayment(Payments);
-       return s;
+    @DeleteMapping("/remove/{address}")
+    public String deleteByAddress(@PathVariable String address){
+        String ss=ServiceInterface.deleteByAddress(address);
+        return ss;
+
+    }
+    @DeleteMapping("/deleteById/{id}")
+    public Integer deleteById(@PathVariable Integer id){
+        Integer ii=ServiceInterface.deleteById(id);
+        return ii;
     }
 }
 /*@DeleteMapping("/deleteById/{id}")

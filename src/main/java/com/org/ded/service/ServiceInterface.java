@@ -6,7 +6,12 @@ import org.springframework.web.bind.annotation.RequestBody;
 
 
 public interface ServiceInterface {
-    public void addpayment( Payments payments);
-    public void updatepayment( Payments Payments);
-    public String deletePayment(Integer Payments);
+    public void addpayment(Payments payments);
+
+    public void updatepayment(Payments Payments);
+
+    public String deleteByAddress(String address);
+
+    public Integer deleteById(Integer id);
+
 }

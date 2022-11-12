@@ -23,30 +23,37 @@ public class Payments {
     }
 
     public void setAccountId(int accountId) {
+
         this.accountId = accountId;
     }
 
     public String getAccountName() {
+
         return accountName;
     }
 
     public void setAccountName(String accountName) {
+
         this.accountName = accountName;
     }
 
     public Double getAccountBalance() {
+
         return accountBalance;
     }
 
     public void setAccountBalance(Double accountBalance) {
+
         this.accountBalance = accountBalance;
     }
 
     public String getAddress() {
+
         return address;
     }
 
     public void setAddress(String address) {
+
         this.address = address;
     }
 }
